@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2obefrvo57rx"
+path="res://.godot/imported/paper-245786.wav-753d27202ff89254e6855125f08d3e9f.sample"
+
+[deps]
+
+source_file="res://PirataJackson/Sound Effects/paper-245786.wav"
+dest_files=["res://.godot/imported/paper-245786.wav-753d27202ff89254e6855125f08d3e9f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

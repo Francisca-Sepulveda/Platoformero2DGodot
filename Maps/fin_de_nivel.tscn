@@ -1,0 +1,73 @@
+[gd_scene load_steps=15 format=3 uid="uid://bqclwajpux566"]
+
+[ext_resource type="Script" path="res://Maps/fin_de_nivel.gd" id="1_0dryl"]
+[ext_resource type="Texture2D" uid="uid://bmpgu8b6iprt2" path="res://PirataJackson/Flag/Flag 01.png" id="2_hj7er"]
+[ext_resource type="Texture2D" uid="uid://thveq2so6lnf" path="res://PirataJackson/Flag/Flag 02.png" id="3_3g2xw"]
+[ext_resource type="Texture2D" uid="uid://cst8fypljoekh" path="res://PirataJackson/Flag/Flag 03.png" id="4_3874d"]
+[ext_resource type="Texture2D" uid="uid://dxupjyprv5jxx" path="res://PirataJackson/Flag/Flag 04.png" id="5_53vf8"]
+[ext_resource type="Texture2D" uid="uid://s0x1md41xhns" path="res://PirataJackson/Flag/Flag 05.png" id="6_poegb"]
+[ext_resource type="Texture2D" uid="uid://crg2ifyct2uyr" path="res://PirataJackson/Flag/Flag 06.png" id="7_mtv4s"]
+[ext_resource type="Texture2D" uid="uid://d1m5kr8kvkmsv" path="res://PirataJackson/Flag/Flag 07.png" id="8_ef5lk"]
+[ext_resource type="Texture2D" uid="uid://buklol4gy0bws" path="res://PirataJackson/Flag/Flag 08.png" id="9_6pswp"]
+[ext_resource type="Texture2D" uid="uid://cthpp2dvx4c6q" path="res://PirataJackson/Flag/Flag 09.png" id="10_wwbc7"]
+
+[sub_resource type="Animation" id="Animation_66ojl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_hj7er")]
+}
+
+[sub_resource type="Animation" id="Animation_6fm2b"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_3g2xw"), ExtResource("4_3874d"), ExtResource("5_53vf8"), ExtResource("6_poegb"), ExtResource("7_mtv4s"), ExtResource("8_ef5lk"), ExtResource("9_6pswp"), ExtResource("10_wwbc7")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gkc6r"]
+_data = {
+"RESET": SubResource("Animation_66ojl"),
+"idle": SubResource("Animation_6fm2b")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrlaf"]
+size = Vector2(4, 42)
+
+[node name="finDeNivel" type="Area2D"]
+script = ExtResource("1_0dryl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -14)
+scale = Vector2(1, 0.989247)
+texture = ExtResource("2_hj7er")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gkc6r")
+}
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-15, 11)
+shape = SubResource("RectangleShape2D_yrlaf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

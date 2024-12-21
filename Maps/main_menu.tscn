@@ -1,0 +1,358 @@
+[gd_scene load_steps=29 format=3 uid="uid://cas78vxyynoqw"]
+
+[ext_resource type="Script" path="res://Maps/main_menu.gd" id="1_i1wkj"]
+[ext_resource type="Texture2D" uid="uid://ox2oxe77i0t7" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/16.png" id="2_bmvgu"]
+[ext_resource type="FontFile" uid="uid://6kevsfysjxx2" path="res://Assets_PixelAdventure/Fonts/NokiaCellphoneFC.ttf" id="2_sv2xo"]
+[ext_resource type="Texture2D" uid="uid://dwgd7r2vai0q4" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/9.png" id="3_rdsxc"]
+[ext_resource type="Texture2D" uid="uid://cvlpl0yi0q8ge" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/24.png" id="4_5idft"]
+[ext_resource type="Texture2D" uid="uid://bv42yhc0ym4nc" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/5.png" id="5_bi5ca"]
+[ext_resource type="Texture2D" uid="uid://dtfqxxx7sxe5j" path="res://Assets_PixelAdventure/Background/Clouds/Clouds 2/3.png" id="5_v3ri2"]
+[ext_resource type="Texture2D" uid="uid://bvtiw7h8r8jvs" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/12.png" id="6_hrbsr"]
+[ext_resource type="Texture2D" uid="uid://cwyo8cv8jjtc4" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/6.png" id="7_rhcnr"]
+[ext_resource type="Texture2D" uid="uid://cv8idwyytbdqo" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/15.png" id="8_fx4e5"]
+[ext_resource type="Texture2D" uid="uid://v2ovem7l5nrq" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/2.png" id="9_iu3ld"]
+[ext_resource type="Texture2D" uid="uid://b6dk5r5awuke1" path="res://PirataJackson/Wood and Paper UI/Sprites/Big Text/7.png" id="10_iftxg"]
+[ext_resource type="Texture2D" uid="uid://cj18yy1a62rld" path="res://PirataJackson/Wood and Paper UI/Sprites/Green Button/1.png" id="11_qqlx6"]
+[ext_resource type="Texture2D" uid="uid://hi6iwjj8rwrl" path="res://PirataJackson/Wood and Paper UI/Sprites/Yellow Button/1.png" id="12_xtr6s"]
+[ext_resource type="Texture2D" uid="uid://bp5mqauej3m24" path="res://Assets_PixelAdventure/Background/Pink.png" id="14_rsxqb"]
+[ext_resource type="Texture2D" uid="uid://dgswfe0tfcl1c" path="res://Assets_PixelAdventure/Background/Clouds/Clouds 4/4.png" id="16_rae10"]
+[ext_resource type="Texture2D" uid="uid://3pca7j8af7ct" path="res://Assets_PixelAdventure/Background/Clouds/Clouds 4/3.png" id="17_aoftk"]
+[ext_resource type="AudioStream" uid="uid://be31rn0bhxsug" path="res://PirataJackson/water/fresh-water-fulldemo.mp3" id="18_0wilx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i4in5"]
+texture = ExtResource("11_qqlx6")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ux6wy"]
+texture = ExtResource("11_qqlx6")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ko76i"]
+texture = ExtResource("11_qqlx6")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s88kb"]
+texture = ExtResource("11_qqlx6")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pb2qj"]
+texture = ExtResource("12_xtr6s")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="Theme" id="Theme_lmq25"]
+Button/styles/disabled = SubResource("StyleBoxTexture_i4in5")
+Button/styles/focus = SubResource("StyleBoxTexture_ux6wy")
+Button/styles/hover = SubResource("StyleBoxTexture_ko76i")
+Button/styles/normal = SubResource("StyleBoxTexture_s88kb")
+Button/styles/pressed = SubResource("StyleBoxTexture_pb2qj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxvsp"]
+
+[sub_resource type="Theme" id="Theme_mi6mn"]
+default_font = ExtResource("2_sv2xo")
+Button/styles/focus = SubResource("StyleBoxTexture_nxvsp")
+
+[sub_resource type="Theme" id="Theme_ys3v2"]
+default_font = ExtResource("2_sv2xo")
+
+[sub_resource type="Theme" id="Theme_tccam"]
+default_font = ExtResource("2_sv2xo")
+
+[node name="Main_Menu" type="Node"]
+script = ExtResource("1_i1wkj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pixel_Flip_Flop" type="HBoxContainer" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 40.0
+offset_top = 28.0
+offset_right = 218.0
+offset_bottom = 39.0
+scale = Vector2(2, 2)
+mouse_filter = 2
+alignment = 1
+
+[node name="P" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("2_bmvgu")
+stretch_mode = 4
+
+[node name="I" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("3_rdsxc")
+stretch_mode = 4
+
+[node name="X" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("4_5idft")
+stretch_mode = 4
+
+[node name="E" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("5_bi5ca")
+stretch_mode = 4
+
+[node name="L" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("6_hrbsr")
+stretch_mode = 4
+
+[node name="F" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("7_rhcnr")
+stretch_mode = 4
+
+[node name="L2" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("6_hrbsr")
+stretch_mode = 4
+
+[node name="I2" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("3_rdsxc")
+stretch_mode = 4
+
+[node name="P2" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("2_bmvgu")
+stretch_mode = 4
+
+[node name="F2" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("7_rhcnr")
+stretch_mode = 4
+
+[node name="P11" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("6_hrbsr")
+stretch_mode = 4
+
+[node name="P12" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("8_fx4e5")
+stretch_mode = 4
+
+[node name="P13" type="TextureRect" parent="CanvasLayer/Pixel_Flip_Flop"]
+layout_mode = 2
+texture = ExtResource("2_bmvgu")
+stretch_mode = 4
+
+[node name="Boogie" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 136.0
+offset_top = 64.0
+offset_right = 224.0
+offset_bottom = 75.0
+scale = Vector2(2, 2)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("9_iu3ld")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("8_fx4e5")
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("8_fx4e5")
+stretch_mode = 4
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("10_iftxg")
+stretch_mode = 4
+
+[node name="TextureRect5" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("3_rdsxc")
+stretch_mode = 4
+
+[node name="TextureRect6" type="TextureRect" parent="CanvasLayer/Boogie"]
+layout_mode = 2
+texture = ExtResource("5_bi5ca")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 153.0
+offset_top = 108.0
+offset_right = 291.0
+offset_bottom = 225.0
+rotation = -6.28319
+scale = Vector2(0.8, 0.8)
+theme = SubResource("Theme_lmq25")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_mi6mn")
+text = "Comenzar
+"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ys3v2")
+text = "Salir
+"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_tccam")
+text = "Full Screen
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 68.0
+offset_top = -15.0
+offset_right = 171.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+size_flags_vertical = 4
+theme = SubResource("Theme_lmq25")
+alignment = 1
+
+[node name="Nivel1" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_mi6mn")
+text = "
+Nivel 1
+
+"
+
+[node name="Nivel2" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_ys3v2")
+text = "
+Nivel 2
+
+"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 99.0
+offset_top = -15.0
+offset_right = 179.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+size_flags_vertical = 4
+theme = SubResource("Theme_lmq25")
+alignment = 1
+
+[node name="Nivel3" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_tccam")
+text = "
+Nivel 3
+
+"
+
+[node name="Nivel4" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = SubResource("Theme_tccam")
+text = "
+Nivel 4
+
+"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2(0, 200)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(212, 102.5)
+scale = Vector2(6.71875, 4.29687)
+texture = ExtResource("14_rsxqb")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(214, 102.5)
+scale = Vector2(0.743056, 0.848765)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(212, 98)
+scale = Vector2(0.746528, 0.875)
+texture = ExtResource("5_v3ri2")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(223, 99.5)
+scale = Vector2(0.711806, 0.830247)
+texture = ExtResource("16_rae10")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1008, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(69.9, 143)
+scale = Vector2(0.457986, 0.598765)
+texture = ExtResource("17_aoftk")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(212, 119)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_0wilx")
+volume_db = 8.447
+pitch_scale = 1.1
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Nivel1" to="." method="_on_nivel_1_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Nivel2" to="." method="_on_nivel_2_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Nivel3" to="." method="_on_nivel_3_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Nivel4" to="." method="_on_nivel_4_pressed"]

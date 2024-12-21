@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bbjohtlktemmv"
+path="res://.godot/imported/456367__felixyadomi__hop2.wav-735780030222e7ec1931f0f53e839723.sample"
+
+[deps]
+
+source_file="res://PirataJackson/Sound Effects/456367__felixyadomi__hop2.wav"
+dest_files=["res://.godot/imported/456367__felixyadomi__hop2.wav-735780030222e7ec1931f0f53e839723.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

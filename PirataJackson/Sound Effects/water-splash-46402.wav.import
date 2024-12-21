@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ciy32brpe1uat"
+path="res://.godot/imported/water-splash-46402.wav-d64f1fa215038025869fcbb923513b98.sample"
+
+[deps]
+
+source_file="res://PirataJackson/Sound Effects/water-splash-46402.wav"
+dest_files=["res://.godot/imported/water-splash-46402.wav-d64f1fa215038025869fcbb923513b98.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

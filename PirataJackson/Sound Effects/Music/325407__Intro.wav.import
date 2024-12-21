@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bsvyl1y0hux8b"
+path="res://.godot/imported/325407__Intro.wav-80b3885ac0038f7f819f8b43c1524d24.sample"
+
+[deps]
+
+source_file="res://PirataJackson/Sound Effects/Music/325407__Intro.wav"
+dest_files=["res://.godot/imported/325407__Intro.wav-80b3885ac0038f7f819f8b43c1524d24.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

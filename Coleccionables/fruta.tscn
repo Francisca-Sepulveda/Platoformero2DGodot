@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://cjhhhl1o37set"]
+
+[ext_resource type="Script" path="res://Coleccionables/fruta.gd" id="1_1s31y"]
+[ext_resource type="Texture2D" uid="uid://d00p2dq5atvcq" path="res://PirataJackson/Gold Coin/01.png" id="2_05s1h"]
+[ext_resource type="Texture2D" uid="uid://0capmjek4usm" path="res://PirataJackson/Gold Coin/02.png" id="3_k0xl0"]
+[ext_resource type="Texture2D" uid="uid://lqadke202qg6" path="res://PirataJackson/Gold Coin/03.png" id="4_6ghpr"]
+[ext_resource type="Texture2D" uid="uid://bl5ym6dbrd2i4" path="res://PirataJackson/Gold Coin/04.png" id="5_sn7k7"]
+
+[sub_resource type="Animation" id="Animation_7ebno"]
+resource_name = "Nueva Animación"
+length = 0.8
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_05s1h"), ExtResource("3_k0xl0"), ExtResource("4_6ghpr"), ExtResource("5_sn7k7"), ExtResource("2_05s1h")]
+}
+
+[sub_resource type="Animation" id="Animation_6rda8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_05s1h")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pfgbd"]
+_data = {
+"Nueva Animación": SubResource("Animation_7ebno"),
+"RESET": SubResource("Animation_6rda8")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7eiyg"]
+radius = 10.198
+
+[node name="fruta" type="Area2D"]
+script = ExtResource("1_1s31y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_05s1h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pfgbd")
+}
+autoplay = "Nueva Animación"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7eiyg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
